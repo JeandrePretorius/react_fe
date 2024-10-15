@@ -10,8 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 700px; /* Fixed square size */
-    height: 700px; /* Same as width to make it a square */
+    width: 70%; /* Fixed square size */
+    height: 70%; /* Same as width to make it a square */
     padding: 10px;
     background-image: url('../../../../assets/images/koi.jpg');
     background-size: cover;
