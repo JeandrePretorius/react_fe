@@ -1,8 +1,14 @@
 .HomePage {
     text-align: center;
     background-color: #e4c7a7;
-    height: 90vh;
+    height: 100vh;
 }
+
+.Header {
+    text-align: center;
+    background-color: #e4c7a7;
+    height: 10vh;
+  }
 
 .MainText {
     text-align: center;
