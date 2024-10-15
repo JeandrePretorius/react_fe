@@ -29,3 +29,19 @@
 h1, p {
     margin: 0;
 }
+
+.fancy-text {
+    font-family: 'haiku';
+    font-size: 50px;
+    color: #9f3534;
+    padding: 20px
+}
+
+.fancy-subtext {
+    font-family: 'haiku';
+    font-size: 30px;
+    color: #9f3534;
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}

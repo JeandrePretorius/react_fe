@@ -5,8 +5,8 @@ const MessageSection = () => (
   <div className="outer-container">
     <div className="background-container">
       <div className="overlay">
-        <h1>Your Overlay Text Here</h1>
-        <p>Additional text can go here.</p>
+        <u><h1 className="fancy-text">Haiku</h1></u>
+        <p className="fancy-subtext">a Japanese poem of seventeen syllables, in three lines of five, seven, and five, traditionally evoking images of the natural world.</p>
       </div>
     </div>
   </div>
