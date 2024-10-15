@@ -7,7 +7,7 @@ const HomePage = () => (
   <div className="HomePage">
     <div className="MainText">
       <WelcomeMessage/>
-      <Button text="Get Started"/>
+      <Button text="Get Started" link="/explore"/>
     </div>
   </div>
 );
