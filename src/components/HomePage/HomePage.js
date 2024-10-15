@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomePage.css';
-import WelcomeMessage from '../WelcomeMessage/WelcomeMessage';
+import WelcomeMessage from './WelcomeMessage/WelcomeMessage';
 import Button from '../Button/Button';
 
 const HomePage = () => (
