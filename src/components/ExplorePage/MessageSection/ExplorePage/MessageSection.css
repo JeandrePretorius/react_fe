@@ -1,0 +1,31 @@
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Take full height of the section */
+    width: 100%;  /* Take full width of the section */
+}
+
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px; /* Fixed square size */
+    height: 700px; /* Same as width to make it a square */
+    padding: 10px;
+    background-image: url('../../../../assets/images/koi.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: relative;
+    color: #9f3534;
+    text-align: center;
+    z-index: 1;
+}
+
+h1, p {
+    margin: 0;
+}
