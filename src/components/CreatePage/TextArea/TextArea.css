@@ -1,1 +1,24 @@
-.TextArea {}
+.TextArea {
+    font-family: 'haiku';
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5rem;
+    height: 50%;
+}
+
+textarea {
+    width: 85% !important;
+    height: 100% !important;
+    background-color: #d1b696;
+    color: #9f3534;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s, background-color 0.7s;
+    resize: none !important; /* Prevents resizing */
+    overflow: auto; /* Enables scrolling */
+    width: 300px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    padding: 50px;
+}
+

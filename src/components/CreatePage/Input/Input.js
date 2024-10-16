@@ -1,15 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './Input.css';
 
 const Input = () => (
   <div className="Input">
-    Input Component
+    <input type="text" id="haiku_input" name="haiku_input"/>
   </div>
 );
-
-Input.propTypes = {};
-
-Input.defaultProps = {};
 
 export default Input;

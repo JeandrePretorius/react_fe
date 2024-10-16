@@ -2,7 +2,7 @@ import React from 'react';
 import './Button.css';
 import { useNavigate } from 'react-router-dom';
 
-const Button = ({ text, link }) => {
+const Button = ({ text, link, kanji }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -14,7 +14,7 @@ const Button = ({ text, link }) => {
   return (
     <div className="ButtonComponent">
       <button className="Button rounded-xl" onClick={handleClick}>
-        {text} 造
+        {text} {kanji}
       </button>
     </div>
   );
