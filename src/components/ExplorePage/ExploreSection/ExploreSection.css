@@ -1,1 +1,74 @@
-.ExploreSection {}
+.ExploreSection {
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+  }
+  
+  .Title {
+    font-family: 'haiku';
+    font-size: 20px;
+    padding-left: 3rem;
+    padding-top: 7rem;
+  }
+  
+  .Card {
+    width: 100%;
+    max-width: 40rem; /* Adjust card size */
+    background-color: white;
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb; /* Border color */
+  }
+  
+  .CardContent {
+    padding: 1.5rem;
+  }
+  
+  .Row {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .Row:hover {
+    background-color: #ebf8ff; /* Blueish highlight */
+  }
+  
+  .RowTitle {
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #1f2937;
+    transition: color 0.3s ease;
+  }
+  
+  .RowDescription {
+    font-size: 0.875rem;
+    color: #6b7280;
+    transition: color 0.3s ease;
+  }
+  
+  .Row:hover .RowTitle {
+    color: #1d4ed8; /* Darker blue on hover */
+  }
+  
+  .Row:hover .RowDescription {
+    color: #374151; /* Slightly darker grey on hover */
+  }
+  
+  .RowBorder {
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .Row:hover .RowBorder {
+    border-color: #bfdbfe; /* Blueish border on hover */
+  }
+  

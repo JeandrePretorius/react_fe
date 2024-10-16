@@ -1,6 +1,7 @@
 import React from 'react';
 import './ExplorePage.css';
 import MessageSection from './MessageSection/MessageSection';
+import ExploreSection from './ExploreSection/ExploreSection';
 
 const ExplorePage = () => (
   <div class="container">
@@ -8,8 +9,7 @@ const ExplorePage = () => (
             <MessageSection/>
         </div>
         <div class="section section-2">
-            <h1>Section 2</h1>
-            <p>This section takes up one-third of the screen.</p>
+            <ExploreSection/>
         </div>
     </div>
 );
