@@ -19,7 +19,7 @@ const ExploreSection = () => {
 
   return (
     <div className="ExploreSection">
-      <div className='Title'>My Notes</div>
+      <div className='Title'>My Haiku's</div>
       <div className="Card">
         <div className="CardContent">
           <div className="flex flex-col space-y-2">

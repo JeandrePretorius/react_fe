@@ -4,7 +4,7 @@ import MessageSection from './MessageSection/MessageSection';
 import ExploreSection from './ExploreSection/ExploreSection';
 
 const ExplorePage = () => (
-  <div className="container">
+    <div className="container">
         <div className="section section-1">
             <MessageSection/>
         </div>
