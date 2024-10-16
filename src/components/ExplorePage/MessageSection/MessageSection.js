@@ -12,8 +12,4 @@ const MessageSection = () => (
   </div>
 );
 
-MessageSection.propTypes = {};
-
-MessageSection.defaultProps = {};
-
 export default MessageSection;

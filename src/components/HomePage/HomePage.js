@@ -13,8 +13,4 @@ const HomePage = () => (
   </div>
 );
 
-HomePage.propTypes = {};
-
-HomePage.defaultProps = {};
-
 export default HomePage;

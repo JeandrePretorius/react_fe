@@ -44,7 +44,7 @@
   }
   
   .Row:hover {
-    background-color: #e1d8d2; /* Blueish highlight */
+    background-color: #e1d8d2;
   }
   
   .RowTitle {
@@ -82,7 +82,7 @@
   }
   
   .Row:hover .RowBorder {
-    border-color: #bfdbfe; /* Blueish border on hover */
+    border-color: #e1b486; /* Blueish border on hover */
   }
 
   /* Scrollbar */
