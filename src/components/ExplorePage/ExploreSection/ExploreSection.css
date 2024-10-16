@@ -11,16 +11,23 @@
   }
   
   .Card {
-    width: 100%;
-    max-width: 40rem; /* Adjust card size */
-    background-color: white;
-    border-radius: 0.5rem; /* Rounded corners */
+    width: 90%;
+    height: 70%;
+    max-width: 90%; /* Adjust card size */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     border: 1px solid #e5e7eb; /* Border color */
+    position: relative; /* To ensure layering */
+    overflow: hidden;
+    margin-left:2rem;
+    margin-right: 2rem;
   }
   
   .CardContent {
+    position: relative;
+    z-index: 2; /* Bring content above the semi-transparent background */
     padding: 1.5rem;
+    background-color: transparent; /* Ensure content background is fully opaque */
   }
   
   .Row {
