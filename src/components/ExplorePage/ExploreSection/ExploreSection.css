@@ -5,9 +5,12 @@
   
   .Title {
     font-family: 'haiku';
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: 800;
     padding-left: 3rem;
     padding-top: 7rem;
+    padding-bottom: 1rem;
+    color: #9f3534;
   }
   
   .Card {
@@ -15,8 +18,7 @@
     height: 70%;
     max-width: 90%; /* Adjust card size */
     background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e5e7eb; /* Border color */
+    border: 0px solid #e5e7eb; /* Border color */
     position: relative; /* To ensure layering */
     overflow: hidden;
     margin-left:2rem;
@@ -26,15 +28,15 @@
   .CardContent {
     position: relative;
     z-index: 2; /* Bring content above the semi-transparent background */
-    padding: 1.5rem;
     background-color: transparent; /* Ensure content background is fully opaque */
+    height: 100%;
+    overflow: auto;
   }
   
   .Row {
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
-    border-radius: 0.5rem;
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -42,35 +44,39 @@
   }
   
   .Row:hover {
-    background-color: #ebf8ff; /* Blueish highlight */
+    background-color: #e1d8d2; /* Blueish highlight */
   }
   
   .RowTitle {
     font-weight: 500;
     font-size: 1.125rem;
-    color: #1f2937;
+    color: #9f3534;
     transition: color 0.3s ease;
+    font-family: 'haiku';
+    font-size: 20px;
+    font-weight: 600;
   }
   
   .RowDescription {
     font-size: 0.875rem;
-    color: #6b7280;
+    color: #9f3534;
     transition: color 0.3s ease;
+    font-family: 'haiku';
+    font-size: 15px;
   }
   
   .Row:hover .RowTitle {
-    color: #1d4ed8; /* Darker blue on hover */
+    color: #9f3534; /* Darker blue on hover */
   }
   
   .Row:hover .RowDescription {
-    color: #374151; /* Slightly darker grey on hover */
+    color: #9f3534; /* Slightly darker grey on hover */
   }
   
   .RowBorder {
     position: absolute;
     inset: 0;
-    border: 1px solid transparent;
-    border-radius: 0.5rem;
+    border: 0px solid transparent;
     pointer-events: none;
     transition: border-color 0.3s ease;
   }
@@ -78,4 +84,31 @@
   .Row:hover .RowBorder {
     border-color: #bfdbfe; /* Blueish border on hover */
   }
+
+  /* Scrollbar */
+  /* Webkit browsers (Chrome, Edge, Safari) */
+  .CardContent::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  .CardContent::-webkit-scrollbar-track {
+    background-color: #e1b486; /* Background of the scrollbar track */
+  }
+  
+  .CardContent::-webkit-scrollbar-thumb {
+    background-color: #9f3534; /* Color of the scrollbar thumb (scroll handle) */
+    border-radius: 10px; /* Rounded scrollbar handle */
+    border: 2px solid #e1b486; /* Optional: adds space around thumb */
+  }
+  
+  .CardContent::-webkit-scrollbar-thumb:hover {
+    background-color: #9f3534; /* Darker blue on hover */
+  }
+  
+  /* Firefox */
+  .CardContent {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #9f3534 #e1b486; /* Thumb color and track color */
+  }
+  
   
