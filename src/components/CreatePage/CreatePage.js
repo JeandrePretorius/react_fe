@@ -3,7 +3,7 @@ import './CreatePage.css';
 import ExploreSection from './ExploreSection/ExploreSection';
 
 const CreatePage = () => (
-  <div className="container">
+  <div className="page-container">
         <div className="section section-1">
             Content here
         </div>
