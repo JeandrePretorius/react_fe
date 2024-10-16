@@ -1,6 +1,6 @@
 import React from 'react';
 import './ExplorePage.css';
-import MessageSection from './MessageSection/ExplorePage/MessageSection';
+import MessageSection from './MessageSection/MessageSection';
 
 const ExplorePage = () => (
   <div class="container">
