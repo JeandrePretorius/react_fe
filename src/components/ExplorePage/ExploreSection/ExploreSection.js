@@ -2,13 +2,35 @@ import React from 'react';
 import './ExploreSection.css';
 
 const ExploreSection = () => {
+  //Dummy data
   const items = [
-    { id: 70, title: "Annual Financial Report", description: "Complete overview of company financials for FY 2023" },
-    { id: 69, title: "Marketing Campaign Results", description: "Q2 digital marketing performance analysis" },
-    { id: 68, title: "Product Launch Timeline", description: "Detailed schedule for new product release" },
-    { id: 67, title: "Team Performance Review", description: "Department productivity metrics and KPIs" },
-    { id: 66, title: "Customer Satisfaction Survey", description: "Results from recent NPS and satisfaction study" }
-  ];
+    { 
+        id: 70, 
+        title: "Annual Financial Report", 
+        description: "Year’s end draws closer,\nNumbers weave stories untold,\nBalance found in books." 
+    },
+    { 
+        id: 69, 
+        title: "Marketing Campaign Results", 
+        description: "Ads fly through the air,\nData whispers in the wind,\nSuccess finds its way." 
+    },
+    { 
+        id: 68, 
+        title: "Product Launch Timeline", 
+        description: "Time flows like a stream,\nNew ideas set to bloom soon,\nLaunch day beckons near." 
+    },
+    { 
+        id: 67, 
+        title: "Team Performance Review", 
+        description: "Together we rise,\nEfforts measured by the stars,\nThe team’s light shines bright." 
+    },
+    { 
+        id: 66, 
+        title: "Customer Satisfaction Survey", 
+        description: "Voices all around,\nGratitude and silent sighs,\nA heart’s truth revealed." 
+    }
+];
+
 
   const handleRowClick = (id) => {
     console.log(`Clicked row with id: ${id}`);
