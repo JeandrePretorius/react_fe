@@ -13,7 +13,7 @@
     width: 70%; /* Fixed square size */
     height: 70%; /* Same as width to make it a square */
     padding: 10px;
-    background-image: url('../../../assets/images/koi.jpg');
+    background-image: url('../../assets/images/koi.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
