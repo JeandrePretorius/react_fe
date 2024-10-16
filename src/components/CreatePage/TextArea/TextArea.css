@@ -3,11 +3,11 @@
     font-size: 20px;
     font-weight: 600;
     padding: 5rem;
-    height: 50%;
+    width: 100%;
 }
 
 textarea {
-    width: 85% !important;
+    width: 100% !important;
     height: 100% !important;
     background-color: #d1b696;
     color: #9f3534;
