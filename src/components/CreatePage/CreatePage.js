@@ -1,6 +1,6 @@
 import React from 'react';
 import './CreatePage.css';
-import ExploreSection from '../ExplorePage/ExploreSection/ExploreSection';
+import ExploreSection from './ExploreSection/ExploreSection';
 
 const CreatePage = () => (
   <div className="container">

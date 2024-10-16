@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './ExploreSection.css';
-import { useNavigate } from 'react-router-dom';
 
 
 const ExploreSection = () => {
@@ -13,15 +12,11 @@ const ExploreSection = () => {
       .then(data => setItems(data))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
-
-  const navigate = useNavigate();
  
   const handleRowClick = (id) => {
   
     console.log(`Clicked row with id: ${id}`);
     // Add your click handler logic here
-
-    navigate('/haiku');
   };
 
   return (
