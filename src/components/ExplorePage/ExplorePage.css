@@ -1,1 +1,27 @@
-.ExplorePage {}
+body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    padding: 20px; /* Add some padding for aesthetics */
+}
+
+.section-1 {
+    flex: 2; /* Two-thirds of the space */
+    background-color: #e4c7a7;
+    color: white;
+}
+
+.section-2 {
+    flex: 1; /* One-third of the space */
+    background-color: #e1b486;
+    color: white;
+}

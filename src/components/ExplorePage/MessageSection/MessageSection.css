@@ -1,0 +1,47 @@
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Take full height of the section */
+    width: 100%;  /* Take full width of the section */
+}
+
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%; /* Fixed square size */
+    height: 70%; /* Same as width to make it a square */
+    padding: 10px;
+    background-image: url('../../../assets/images/koi.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: relative;
+    color: #9f3534;
+    text-align: center;
+    z-index: 1;
+}
+
+h1, p {
+    margin: 0;
+}
+
+.fancy-text {
+    font-family: 'haiku';
+    font-size: 50px;
+    color: #9f3534;
+    padding: 20px
+}
+
+.fancy-subtext {
+    font-family: 'haiku';
+    font-size: 30px;
+    color: #9f3534;
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}

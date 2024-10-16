@@ -9,8 +9,4 @@ const WelcomeMessage = () => (
   </div>
 );
 
-WelcomeMessage.propTypes = {};
-
-WelcomeMessage.defaultProps = {};
-
 export default WelcomeMessage;
