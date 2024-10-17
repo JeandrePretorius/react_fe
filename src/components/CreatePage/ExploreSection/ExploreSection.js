@@ -7,7 +7,7 @@ const ExploreSection = () => {
 
   // Fetch the notes data from Rails API
   useEffect(() => {
-    fetch('http://localhost:3000/notes')  // Replace with the actual URL if necessary
+    fetch('http://localhost:3000/notes') 
       .then(response => response.json())
       .then(data => setItems(data))
       .catch(error => console.error('Error fetching data:', error));
@@ -16,7 +16,6 @@ const ExploreSection = () => {
   const handleRowClick = (id) => {
   
     console.log(`Clicked row with id: ${id}`);
-    // Add your click handler logic here
   };
 
   return (

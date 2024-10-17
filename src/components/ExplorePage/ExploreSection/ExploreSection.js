@@ -17,11 +17,14 @@ const ExploreSection = () => {
   const navigate = useNavigate();
  
   const handleRowClick = (id) => {
-  
     console.log(`Clicked row with id: ${id}`);
-    // Add your click handler logic here
 
-    navigate('/haiku');
+    fetch('http://localhost:3000/notes/' + id)
+      .then(response => response.json())
+      .then(data => {
+        navigate('/haiku', { state: data }); // Pass data using state
+      })
+      .catch(error => console.error('Error fetching data:', error));
   };
 
   return (
