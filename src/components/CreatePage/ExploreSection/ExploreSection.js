@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import './ExploreSection.css';
 
-
-const ExploreSection = () => {
+const ExploreSection = ({ onSelectHaiku }) => {
   const [items, setItems] = useState([]);
 
-  // Fetch the notes data from Rails API
   useEffect(() => {
-    fetch('http://localhost:3000/notes') 
+    fetch('http://localhost:3000/notes')
       .then(response => response.json())
       .then(data => setItems(data))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
- 
+
   const handleRowClick = (id) => {
-  
-    console.log(`Clicked row with id: ${id}`);
+    fetch('http://localhost:3000/notes/' + id)
+      .then(response => response.json())
+      .then(data => {
+        onSelectHaiku(data); // Pass the selected haiku to parent component
+      })
+      .catch(error => console.error('Error fetching data:', error));
   };
 
   return (
