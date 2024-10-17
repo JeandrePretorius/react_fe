@@ -13,7 +13,7 @@ const Button = ({ text, link, kanji }) => {
 
   return (
     <div className="ButtonComponent">
-      <button className="Button rounded-xl" onClick={handleClick}>
+      <button className="Button rounded-xl" onClick={handleClick} type={text === "Save" ? "submit" : "button"}>
         {text} {kanji}
       </button>
     </div>
