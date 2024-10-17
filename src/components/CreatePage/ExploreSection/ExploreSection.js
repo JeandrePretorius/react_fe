@@ -1,14 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, forwardRef, useImperativeHandle } from 'react';
 import './ExploreSection.css';
 
-const ExploreSection = ({ onSelectHaiku }) => {
+// Use forwardRef to pass the ref from parent to child component
+const ExploreSection = forwardRef(({ onSelectHaiku, selected }, ref) => {
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
+  const selectedRow = selected;
+
+  // Define a function to fetch data that can be called by parent
+  const fetchData = () => {
     fetch('http://localhost:3000/notes')
       .then(response => response.json())
       .then(data => setItems(data))
       .catch(error => console.error('Error fetching data:', error));
+  };
+
+  // Expose the fetchData method to the parent via the ref
+  useImperativeHandle(ref, () => ({
+    fetchData,
+  }));
+
+  useEffect(() => {
+    fetchData(); // Initial data load
   }, []);
 
   const handleRowClick = (id) => {
@@ -30,7 +43,7 @@ const ExploreSection = ({ onSelectHaiku }) => {
               <div
                 key={item.id}
                 onClick={() => handleRowClick(item.id)}
-                className="Row"
+                className={`Row ${selectedRow === item.id ? 'Selected' : ''}`}
               >
                 <div className="RowBorder"></div>
                 <div>
@@ -44,6 +57,6 @@ const ExploreSection = ({ onSelectHaiku }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ExploreSection;

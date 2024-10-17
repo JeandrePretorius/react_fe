@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './CreatePage.css';
 import ExploreSection from './ExploreSection/ExploreSection';
 import Input from './Input/Input';
@@ -11,13 +11,14 @@ const CreatePage = () => {
     const initialHaiku = location.state || { title: '', description: '' };
     const [haiku, setHaiku] = useState(initialHaiku);
 
+    // Create a reference to call the fetch function in ExploreSection
+    const exploreSectionRef = useRef(null);
+
     const handleHaikuUpdate = (updatedHaiku) => {
         setHaiku(updatedHaiku);
     };
 
     const handleSave = () => {
-        // Assuming haiku has an id when updating existing haiku
-        console.log(haiku);
         fetch(`http://localhost:3000/notes/${haiku.id}`, {
             method: 'PUT',
             headers: {
@@ -28,6 +29,10 @@ const CreatePage = () => {
         .then(response => response.json())
         .then(data => {
             console.log('Haiku updated:', data);
+            // Trigger data refresh in ExploreSection after save
+            if (exploreSectionRef.current) {
+                exploreSectionRef.current.fetchData();
+            }
         })
         .catch(error => {
             console.error('Error updating haiku:', error);
@@ -64,7 +69,11 @@ const CreatePage = () => {
                 </div>
             </div>
             <div className="section section-2">
-                <ExploreSection onSelectHaiku={handleHaikuUpdate} />
+                <ExploreSection
+                    ref={exploreSectionRef}
+                    onSelectHaiku={handleHaikuUpdate}
+                    selected={haiku.id}
+                />
             </div>
         </div>
     );

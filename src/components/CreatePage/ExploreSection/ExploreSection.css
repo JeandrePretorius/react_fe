@@ -85,6 +85,23 @@
     border-color: #e1b486; /* Blueish border on hover */
   }
 
+  .Row.Selected {
+    background-color: #e1d8d2; /* Same as hover background */
+  }
+
+  .Row.Selected .RowTitle {
+      color: #9f3534; /* Same as hover color */
+  }
+
+  .Row.Selected .RowDescription {
+      color: #9f3534; /* Same as hover color */
+  }
+
+  .Row.Selected .RowBorder {
+      border-color: #e1b486; /* Same as hover border */
+  }
+
+
   /* Scrollbar */
   /* Webkit browsers (Chrome, Edge, Safari) */
   .CardContent::-webkit-scrollbar {
