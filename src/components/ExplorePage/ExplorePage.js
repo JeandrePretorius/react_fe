@@ -1,10 +1,10 @@
 import React from 'react';
 import './ExplorePage.css';
-import MessageSection from './MessageSection/MessageSection';
+import MessageSection from '../MessageSection/MessageSection';
 import ExploreSection from './ExploreSection/ExploreSection';
 
 const ExplorePage = () => (
-  <div className="container">
+    <div className="page-container">
         <div className="section section-1">
             <MessageSection/>
         </div>

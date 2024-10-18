@@ -25,3 +25,7 @@ body, html {
     background-color: #e1b486;
     color: white;
 }
+
+.row-textarea {
+    height: 50vh !important;
+}

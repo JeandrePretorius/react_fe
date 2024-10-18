@@ -1,0 +1,50 @@
+.TextArea {
+    font-family: 'haiku';
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5rem;
+    width: 100%;
+}
+
+textarea {
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #d1b696;
+    color: #9f3534;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s, background-color 0.7s;
+    resize: none !important; /* Prevents resizing */
+    overflow: auto; /* Enables scrolling */
+    width: 300px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    padding: 50px;
+}
+
+/* Scrollbar */
+  /* Webkit browsers (Chrome, Edge, Safari) */
+  .TextArea::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  .TextArea::-webkit-scrollbar-track {
+    background-color: #e4c7a7; /* Background of the scrollbar track */
+  }
+  
+  .TextArea::-webkit-scrollbar-thumb {
+    background-color: #9f3534; /* Color of the scrollbar thumb (scroll handle) */
+    border-radius: 0px 0px 0px 10px; /* Rounded scrollbar handle */
+    border: 2px solid #e4c7a7; /* Optional: adds space around thumb */
+  }
+  
+  .TextArea::-webkit-scrollbar-thumb:hover {
+    background-color: #9f3534; /* Darker blue on hover */
+  }
+  
+  /* Firefox */
+  .TextArea {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #9f3534 #e4c7a7; /* Thumb color and track color */
+  }
+  

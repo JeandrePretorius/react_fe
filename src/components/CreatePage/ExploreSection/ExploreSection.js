@@ -1,28 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, forwardRef, useImperativeHandle } from 'react';
 import './ExploreSection.css';
-import { useNavigate } from 'react-router-dom';
 
-
-const ExploreSection = () => {
+// Use forwardRef to pass the ref from parent to child component
+const ExploreSection = forwardRef(({ onSelectHaiku, selected }, ref) => {
   const [items, setItems] = useState([]);
 
-  // Fetch the notes data from Rails API
-  useEffect(() => {
-    fetch('http://localhost:3000/notes')  // Replace with the actual URL if necessary
+  const selectedRow = selected;
+
+  // Define a function to fetch data that can be called by parent
+  const fetchData = () => {
+    fetch('http://localhost:3000/notes')
       .then(response => response.json())
       .then(data => setItems(data))
       .catch(error => console.error('Error fetching data:', error));
+  };
+
+  // Expose the fetchData method to the parent via the ref
+  useImperativeHandle(ref, () => ({
+    fetchData,
+  }));
+
+  useEffect(() => {
+    fetchData(); // Initial data load
   }, []);
 
-  const navigate = useNavigate();
- 
   const handleRowClick = (id) => {
-    console.log(`Clicked row with id: ${id}`);
-
     fetch('http://localhost:3000/notes/' + id)
       .then(response => response.json())
       .then(data => {
-        navigate('/haiku', { state: data }); // Pass data using state
+        onSelectHaiku(data); // Pass the selected haiku to parent component
       })
       .catch(error => console.error('Error fetching data:', error));
   };
@@ -37,7 +43,7 @@ const ExploreSection = () => {
               <div
                 key={item.id}
                 onClick={() => handleRowClick(item.id)}
-                className="Row"
+                className={`Row ${selectedRow === item.id ? 'Selected' : ''}`}
               >
                 <div className="RowBorder"></div>
                 <div>
@@ -51,6 +57,6 @@ const ExploreSection = () => {
       </div>
     </div>
   );
-};
+});
 
 export default ExploreSection;
